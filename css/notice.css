@@ -1,0 +1,18 @@
+#commentTitle{
+	text-align: center;
+	font-size:12px;
+
+}
+
+.row_on{
+	background-color:#F8E4CC;
+}
+
+.modal-body{
+	font-size:12px;
+}
+
+.modal-footer p{
+	font-size:12px;
+	float:left;
+}
