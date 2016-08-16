@@ -7,7 +7,7 @@
 		echo "<script>document.location.href='./index.php';</script>"; 
 	} else{
 ?>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -17,7 +17,8 @@
 		<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="css/docs.min.css" rel="stylesheet" media="screen">
-		<link href="css/index.css" rel="stylesheet" media="screen">
+		<link href="css/common.css" rel="stylesheet" media="screen">
+		<link href="css/mypage.css" rel="stylesheet" media="screen">
 	</head>
 	<body>
 
@@ -51,9 +52,12 @@
 				<p><?=$sname?>님의 <code>계정정보</code>와 <code>가계정보</code>를 한눈에 살펴보세요.</p>
 			</div>
 
-			<div class="col-md-4">
+			<div class="col-md-4" id="accountInfo">
 				<div class="panel panel-primary">
-				  <div class="panel-heading">계정정보</div>
+				  <div class="panel-heading">
+				  	계정정보
+				  	<span class="floatright glyphicon glyphicon-chevron-left" onclick="toggleAccountMenu(0);"></span>
+				  </div>
 				  <table class="table table-bordered">
 					<colgroup>
 						<col width="35%">
@@ -78,15 +82,65 @@
 				  </table>
 				</div>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8" id="bookInfo">
 				<div class="panel panel-success">
 				  <div class="panel-heading">가계정보</div>
 				  <div class="panel-body">
-					Panel content
+						<ul>
+							<li>전체자산: 00000원</li>
+							<li>최근1달간 입금횟수: xx번</li>
+							<li>최근1달간 출금횟수: xx번 (위에꺼랑 묶어서 최근1달통계로 보여주던지.. 그래프쓰던지)</li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
 				  </div>
 				</div>
 			</div>
-			
+		</div>
+
+		<div class="container">
+			<div class="col-md-12">
+				<div class="panel panel-warning">
+				  <div class="panel-heading">한줄 메모</div>
+				  <div class="panel-body">
+				  	<ul>
+						  <li class="list-group-item">
+						  	<div class="display-inline">
+						  		<span class="comment-item">어쩌고저쩌고오늘하루등등등</span>
+						  	</div>
+						  	<div class="display-inline floatright">
+						  		<span class="glyphicon glyphicon-calendar textright" data-toggle="tooltip" data-placement="top" title="" data-original-title="2015-12-12">09:32</span>
+						  	</div>
+						  </li>
+						  <li class="list-group-item">
+						  	<div class="display-inline">
+						  		<span class="comment-item">어쩌고저쩌고오늘하루등등등</span>
+						  	</div>
+						  	<div class="display-inline floatright">
+						  		<span class="glyphicon glyphicon-calendar textright" data-toggle="tooltip" data-placement="top" title="" data-original-title="2015-12-12">09:32</span>
+						  	</div>
+						  </li>
+						  <li class="list-group-item">
+						  	<div class="display-inline">
+						  		<span class="comment-item">어쩌고저쩌고오늘하루등등등</span>
+						  	</div>
+						  	<div class="display-inline floatright">
+						  		<span class="glyphicon glyphicon-calendar textright" data-toggle="tooltip" data-placement="top" title="" data-original-title="2015-12-12">09:32</span>
+						  	</div>
+						  </li>
+						  <li class="list-group-item">
+						  	<div class="display-inline">
+						  		<span class="comment-item">어쩌고저쩌고오늘하루등등등</span>
+						  	</div>
+						  	<div class="display-inline floatright">
+						  		<span class="glyphicon glyphicon-calendar textright" data-toggle="tooltip" data-placement="top" title="" data-original-title="2015-12-12">09:32</span>
+						  	</div>
+						  </li>
+						</ul>
+				  </div>
+				</div>
+			</div>
 		</div>
 
 		
@@ -98,7 +152,7 @@
 
 		<script src="js/jquery.min.js"></script> 
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/common.js"></script>
 		<script src="js/mypage.js"></script>
 	</body>
 
